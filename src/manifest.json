@@ -1,0 +1,20 @@
+{
+  "name": "吉他和弦速查",
+  "appid": "__UNI__GUITAR_CHORD_FINDER",
+  "description": "面向初学者的吉他指板单音与和弦快速查找工具",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wx0000000000000000",
+    "setting": {
+      "urlCheck": false,
+      "es6": true
+    },
+    "usingComponents": true
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "vueVersion": "3"
+}

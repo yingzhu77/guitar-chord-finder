@@ -1,0 +1,19 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "吉他和弦速查",
+        "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#f5f5f3",
+        "backgroundColor": "#f5f5f3"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "吉他和弦速查",
+    "navigationBarBackgroundColor": "#f5f5f3",
+    "backgroundColor": "#f5f5f3"
+  }
+}
