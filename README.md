@@ -4,6 +4,14 @@
 
 ![预览图](docs/screenshot.png)
 
+## 当前进度
+
+- 小程序名称：吉他和弦速查。
+- 微信小程序 AppID：`wx18da32459ef183ca`，已写入 `src/manifest.json` 的 `mp-weixin.appid`。
+- 备案状态：已完成备案提交，等待微信/管局审核通过后再发布线上版本。
+- 当前版本：`1.0.0`，核心功能已完成，面向微信小程序 `mp-weixin` 构建发布。
+- 上线前建议执行：`npm.cmd run test`、`npm.cmd run type-check`、`npm.cmd run build:mp-weixin`。
+
 ## 特性
 
 - 极简横向指板：只保留 6 根弦、品丝和轻量品位标记。
@@ -90,15 +98,26 @@ npm.cmd run build:mp-weixin
 dist/build/mp-weixin
 ```
 
-上线前需要把 `src/manifest.json` 中的占位 AppID 替换为真实 AppID：
+当前微信小程序 AppID 已配置为：
 
 ```json
 {
   "mp-weixin": {
-    "appid": "wx0000000000000000"
+    "appid": "wx18da32459ef183ca"
   }
 }
 ```
+
+上线流程：
+
+1. 等待小程序备案状态变为已备案或备案成功。
+2. 执行 `npm.cmd run test` 和 `npm.cmd run type-check`，确认测试与类型检查通过。
+3. 执行 `npm.cmd run build:mp-weixin` 生成发布包。
+4. 在微信开发者工具中导入 `dist/build/mp-weixin`，使用 AppID `wx18da32459ef183ca`。
+5. 真机预览检查指板点击、单音查询、和弦识别、调弦切换和本地设置保存。
+6. 在微信开发者工具上传代码，建议版本号填写 `1.0.0`。
+7. 到微信公众平台版本管理中提交代码审核。
+8. 代码审核通过且备案完成后，在微信公众平台手动发布线上版本。
 
 ## 测试
 
