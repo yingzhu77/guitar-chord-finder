@@ -7,8 +7,8 @@
 ## 当前进度
 
 - 小程序名称：吉他和弦速查。
-- 微信小程序 AppID：`wx18da32459ef183ca`，已写入 `src/manifest.json` 的 `mp-weixin.appid`。
-- 备案状态：已完成备案提交，等待微信/管局审核通过后再发布线上版本。
+- 微信小程序 AppID：公开仓库使用占位值，发布前在本地替换为真实 AppID。
+- 备案状态：已完成备案提交，当前版本已通过微信代码审核，等待确认备案状态后发布线上版本。
 - 当前版本：`1.0.0`，核心功能已完成，面向微信小程序 `mp-weixin` 构建发布。
 - 上线前建议执行：`npm.cmd run test`、`npm.cmd run type-check`、`npm.cmd run build:mp-weixin`。
 
@@ -98,26 +98,27 @@ npm.cmd run build:mp-weixin
 dist/build/mp-weixin
 ```
 
-当前微信小程序 AppID 已配置为：
+公开仓库中的微信小程序 AppID 使用占位值：
 
 ```json
 {
   "mp-weixin": {
-    "appid": "wx18da32459ef183ca"
+    "appid": "wx0000000000000000"
   }
 }
 ```
 
 上线流程：
 
-1. 等待小程序备案状态变为已备案或备案成功。
-2. 执行 `npm.cmd run test` 和 `npm.cmd run type-check`，确认测试与类型检查通过。
-3. 执行 `npm.cmd run build:mp-weixin` 生成发布包。
-4. 在微信开发者工具中导入 `dist/build/mp-weixin`，使用 AppID `wx18da32459ef183ca`。
-5. 真机预览检查指板点击、单音查询、和弦识别、调弦切换和本地设置保存。
-6. 在微信开发者工具上传代码，建议版本号填写 `1.0.0`。
-7. 到微信公众平台版本管理中提交代码审核。
-8. 代码审核通过且备案完成后，在微信公众平台手动发布线上版本。
+1. 确认小程序备案状态已变为已备案或备案成功。
+2. 发布前在本地把 `src/manifest.json` 的 `mp-weixin.appid` 替换为真实 AppID。
+3. 执行 `npm.cmd run test` 和 `npm.cmd run type-check`，确认测试与类型检查通过。
+4. 执行 `npm.cmd run build:mp-weixin` 生成发布包。
+5. 在微信开发者工具中导入 `dist/build/mp-weixin`，使用真实 AppID。
+6. 真机预览检查指板点击、单音查询、和弦识别、调弦切换和本地设置保存。
+7. 在微信开发者工具上传代码，建议版本号填写 `1.0.0`。
+8. 到微信公众平台版本管理中提交代码审核。
+9. 代码审核通过且备案完成后，在微信公众平台手动发布线上版本。
 
 ## 测试
 
